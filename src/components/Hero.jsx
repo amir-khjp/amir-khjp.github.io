@@ -26,7 +26,7 @@ export default function Hero() {
       )}
       <div className="container hero-inner">
         <motion.p className="eyebrow" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease }}>
-          Data Science &amp; Machine Learning Research
+          Data Scientist &amp; Machine Learning Engineer
         </motion.p>
         <h1 className="hero-title">
           <motion.span initial={{ y: '110%' }} animate={{ y: 0 }} transition={{ duration: 0.9, delay: 0.1, ease }}>
@@ -37,8 +37,8 @@ export default function Hero() {
           </motion.span>
         </h1>
         <motion.p className="hero-subtitle" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4, ease }}>
-          I build predictive models and ML pipelines that turn clinical records, Persian text, and
-          on-chain transactions into decisions worth trusting.
+          I turn complex, messy data — clinical records, natural language, on-chain transactions —
+          into machine learning systems that are rigorous, interpretable, and built to scale.
         </motion.p>
         <motion.div className="hero-actions" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.55, ease }}>
           <Magnetic as="a" className="btn btn-primary" href="#projects">View Projects</Magnetic>
