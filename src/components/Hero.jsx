@@ -1,35 +1,8 @@
 import { motion } from 'framer-motion';
 import { lazy, Suspense, useEffect, useState } from 'react';
 import Magnetic from './Magnetic.jsx';
-import { stats } from '../data.js';
 
 const HeroCanvas = lazy(() => import('./HeroCanvas.jsx'));
-
-function Counter({ value, decimals = 0 }) {
-  const [display, setDisplay] = useState(0);
-  const [started, setStarted] = useState(false);
-
-  return (
-    <motion.span
-      className="stat-num"
-      onViewportEnter={() => {
-        if (started) return;
-        setStarted(true);
-        const duration = 1200;
-        const start = performance.now();
-        function tick(now) {
-          const p = Math.min((now - start) / duration, 1);
-          const eased = 1 - Math.pow(1 - p, 3);
-          setDisplay(value * eased);
-          if (p < 1) requestAnimationFrame(tick);
-        }
-        requestAnimationFrame(tick);
-      }}
-    >
-      {decimals ? display.toFixed(decimals) : Math.round(display)}
-    </motion.span>
-  );
-}
 
 const marqueeWords = ['CLASSIFICATION', 'ENSEMBLE LEARNING', 'NLP', 'BLOCKCHAIN ANALYTICS', 'CLINICAL AI', 'FASTAPI', 'SMOTE', 'XGBOOST'];
 
@@ -70,14 +43,6 @@ export default function Hero() {
         <motion.div className="hero-actions" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.55, ease }}>
           <Magnetic as="a" className="btn btn-primary" href="#projects">View Projects</Magnetic>
           <Magnetic as="a" className="btn btn-ghost" href="cv/CV-Amirhossein-Khajepour.pdf" target="_blank" rel="noopener">Download CV</Magnetic>
-        </motion.div>
-        <motion.div className="hero-stats" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.7, ease }}>
-          {stats.map((s) => (
-            <div className="stat" key={s.label}>
-              <Counter value={s.value} decimals={s.decimals} />
-              <span className="stat-label">{s.label}</span>
-            </div>
-          ))}
         </motion.div>
       </div>
 

@@ -1,10 +1,3 @@
-export const stats = [
-  { label: 'ML / Data Projects', value: 8, decimals: 0 },
-  { label: 'Research Roles', value: 3, decimals: 0 },
-  { label: 'M.Sc. GPA / 20', value: 17.55, decimals: 2 },
-  { label: 'Models Benchmarked', value: 10, decimals: 0 },
-];
-
 export const education = [
   {
     degree: 'M.Sc. Information Technology Engineering',
