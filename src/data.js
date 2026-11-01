@@ -145,5 +145,5 @@ export const radarData = [
 export const contactLinks = [
   { label: 'Email', value: 'a.khajepour.official@gmail.com', href: 'mailto:a.khajepour.official@gmail.com' },
   { label: 'GitHub', value: 'github.com/amir-khjp', href: 'https://github.com/amir-khjp', external: true },
-  { label: 'LinkedIn', value: 'Add your LinkedIn URL', href: '#' },
+  { label: 'LinkedIn', value: 'linkedin.com/in/amirhossein-khajepour-blockchain-ml', href: 'https://www.linkedin.com/in/amirhossein-khajepour-blockchain-ml', external: true },
 ];
